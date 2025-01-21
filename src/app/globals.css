@@ -2,20 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.hero-section-text {
+  background-image: linear-gradient(to right, #2f57ef 0%, #c664ff 51%, #c664ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Ensures only the gradient is visible */
+  font-weight: bold; /* Makes the text bold like the design */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.colour{
+  background-image: linear-gradient(to right, #2f57ef 40%, #c664ff 71%, #c664ff 80%);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+.btn{
+    background-image: linear-gradient(to right, #2f57ef 0%, #c664ff 51%, #c664ff 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+}
+
+
+.img-shadow{
+  filter: drop-shadow(0px 0px 12px grey);
+}
+
+
+.ps-border {
+  position: relative;
+}
+
+.ps-border::before {
+  content: "";
+  position: absolute;
+  height: 76%;
+  width: 2px;
+  background-color: #eeeeee2e;
+  top: 29px;
+  right: 0;
+  transition: 0.5s;
+}
+
+/* .ps-border:hover::before {
+  background-color: white;
+} */
+
+.ps-single-wrap:hover {
+  background-color: var(--color-2);
+  margin-top: -30px;
+}
+
+
+.shadow-card {
+  box-shadow: 12px 11px 34px 11px rgba(100, 100, 111, 0.2);
+}
+
+
+
+.btn-home{
+    background-image: linear-gradient(to right, #2f57ef 0%, #c664ff 51%, #c664ff 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+}
+
+.testimonial-des::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  /* background-color: #efbb02; */
+  border-radius: 41px 0 0px 41px;
+  z-index: 0;
+}
+
+.testimonial-des {
+  padding: 10px 10px 26px 30px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+
+.footer-area {
+  margin-top: 110px;
+  background: linear-gradient(180deg, #1E3764 0%, #192335 100%);
+  padding: 50px 0 30px 0;
+  color: var(--color-white);
+}
+
+
+.gradient-border-btn {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-white);
+  padding: 12px 30px;
+  position: relative;
+  border-radius: 10px;
+  transition: 0.5s;
+  background: #1e3764;
+  width: 208px;
+  color: white;
+}
+
+
+.gradient-border2 {
+  background: linear-gradient(to right, #2f57ef 0%, #c664ff 51%, #c664ff 100%);
+  border-radius: 10px;
+  padding: 1px;
+  width: 210px;
 }

@@ -13,7 +13,7 @@ const HeaderComponent = () => {
           <a href="/" className="text-gray-600 hover:text-purple-600">
             Home
           </a>
-          <a href="/courses" className="text-gray-600 hover:text-purple-600">
+          <a href="/Courses" className="text-gray-600 hover:text-purple-600">
             Courses
           </a>
           <a href="/bootcamp" className="text-gray-600 hover:text-purple-600">

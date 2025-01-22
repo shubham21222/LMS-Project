@@ -207,10 +207,10 @@ export default function CoursesSection() {
                 <div className='relative'>
                     <section className=" pt-8">
                         <div className="max-w-7xl mx-auto px-6 ">
-                            <div className="flex justify-between items-center mb-6 hidden md:flex">
-                                <h1 className="text-3xl font-semibold text-black">All Courses</h1>
+                            <div className="flex justify-between items-center mb-6  md:flex">
+                                <h1 className="text-3xl font-bold text-gray-900 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">All Courses</h1>
                                 <p className="text-black/80 text-sm">Showing 9 of 43 data</p>
-                                <div className="flex space-x-2">
+                                <div className="sm:flex space-x-2 hidden sm:block">
                                     <button
                                         onClick={() => setViewType('grid')}
                                         className={`flex items-center px-4 py-2 rounded-lg transition-colors duration-300 ${viewType === 'grid'

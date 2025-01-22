@@ -29,10 +29,10 @@ const HeaderComponent = () => {
 
         {/* Navigation - Desktop */}
         <nav className="hidden md:flex space-x-6 font-semibold">
-          {['Home', 'Courses', 'Bootcamp', 'Find A Tutor'].map((item) => (
+          {['Home', 'Courses' , 'Live classes'].map((item) => (
             <Link
               key={item}
-              href={`/${item === 'Home' ? '' : item === 'Find A Tutor' ? 'tutors' : item.toLowerCase().replace(' ', '-')}`}
+              href={`/${item === 'Home' ? '' : item === 'Live classes' ? 'live-classes' : item.toLowerCase().replace(' ', '-')}`}
               className="relative text-gray-600 hover:text-purple-600 group py-2"
             >
               {item}
@@ -99,10 +99,10 @@ const HeaderComponent = () => {
       {isMenuOpen && (
         <div className="md:hidden fixed top-[72px] left-0 w-full h-screen bg-white z-50">
           <nav className="flex flex-col py-4 px-4">
-            {['Home', 'Courses', 'Bootcamp', 'Find A Tutor'].map((item) => (
+            {['Home', 'Courses' , 'Live classes'].map((item) => (
               <Link
                 key={item}
-                href={`/${item === 'Home' ? '' : item === 'Find A Tutor' ? 'tutors' : item.toLowerCase().replace(' ', '-')}`}
+                href={`/${item === 'Home' ? '' : item === 'Live classes' ? 'live-classes' : item.toLowerCase().replace(' ', '-')}`}
                 className="relative text-gray-600 hover:text-purple-600 group py-4 border-b border-gray-100"
               >
                 <span className="relative z-10">{item}</span>

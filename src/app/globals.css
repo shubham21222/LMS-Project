@@ -85,11 +85,12 @@
 }
 
 
-.footer-area {
-  background: linear-gradient(180deg, #1E3764 0%, #192335 100%);
+.footer-area { 
+  background: linear-gradient(180deg, #4A81B9 0%, #3C4F6A 100%);
   padding: 50px 0 30px 0;
   color: var(--color-white);
 }
+
 
 
 .gradient-border-btn {

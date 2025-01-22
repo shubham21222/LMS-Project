@@ -108,8 +108,8 @@ export default function Footer() {
             </div>
 
             {/* Footer Bottom Section */}
-            <div className="border-t border-gray-700 mt-8"></div>
-            <div className="pt-4 text-sm max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center text-gray-400 space-y-4 md:space-y-0">
+            <div className="border-t border-gray-500 mt-8"></div>
+            <div className="pt-4 text-sm max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center text-gray-300 space-y-4 md:space-y-0">
                 <ul className="flex flex-wrap justify-center md:justify-start space-x-4">
                     <li><a href="#" className="hover:text-white">About us</a></li>
                     <li><a href="#" className="hover:text-white">Privacy policy</a></li>

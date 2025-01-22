@@ -4,7 +4,7 @@ import { ShoppingCart, Search, LogIn, Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const HeaderComponent = () => {
+const HeaderComponent2 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,7 +13,7 @@ const HeaderComponent = () => {
 
   return (
     <header className="bg-white shadow-md w-full relative">
-      <div className="container mx-auto px-4 max-w-[1180px] flex items-center justify-between py-4">
+      <div className="container mx-auto px-4 max-w-7xl flex items-center justify-between py-4">
         {/* Logo */}
         <div className="text-2xl font-bold text-purple-600">
           <a href="/">
@@ -131,4 +131,4 @@ const HeaderComponent = () => {
   );
 };
 
-export default HeaderComponent;
+export default HeaderComponent2;

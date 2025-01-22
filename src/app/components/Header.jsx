@@ -30,14 +30,14 @@ const HeaderComponent = () => {
         {/* Navigation - Desktop */}
         <nav className="hidden md:flex space-x-6 font-semibold">
           {['Home', 'Courses', 'Bootcamp', 'Find A Tutor'].map((item) => (
-            <a
+            <Link
               key={item}
-              href={`/${item === 'Home' ? '' : item.toLowerCase().replace(' ', '-')}`}
+              href={`/${item === 'Home' ? '' : item === 'Find A Tutor' ? 'tutors' : item.toLowerCase().replace(' ', '-')}`}
               className="relative text-gray-600 hover:text-purple-600 group py-2"
             >
               {item}
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300 ease-in-out"></span>
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -102,7 +102,7 @@ const HeaderComponent = () => {
             {['Home', 'Courses', 'Bootcamp', 'Find A Tutor'].map((item) => (
               <Link
                 key={item}
-                href={`/${item === 'Home' ? '' : item === 'Find A Tutor' ? 'tutor' : item.toLowerCase().replace(' ', '-')}`}
+                href={`/${item === 'Home' ? '' : item === 'Find A Tutor' ? 'tutors' : item.toLowerCase().replace(' ', '-')}`}
                 className="relative text-gray-600 hover:text-purple-600 group py-4 border-b border-gray-100"
               >
                 <span className="relative z-10">{item}</span>

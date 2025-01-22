@@ -207,15 +207,15 @@ export default function CoursesSection() {
                 <div className='relative'>
                     <section className=" pt-8">
                         <div className="max-w-7xl mx-auto px-6 ">
-                            <div className="flex justify-between items-center mb-6 ">
+                            <div className="flex justify-between items-center mb-6 hidden md:flex">
                                 <h1 className="text-3xl font-semibold text-black">All Courses</h1>
                                 <p className="text-black/80 text-sm">Showing 9 of 43 data</p>
                                 <div className="flex space-x-2">
                                     <button
                                         onClick={() => setViewType('grid')}
                                         className={`flex items-center px-4 py-2 rounded-lg transition-colors duration-300 ${viewType === 'grid'
-                                            ? 'text-blue-600 bg-white hover:bg-blue-50'
-                                            : 'text-black bg-white/20 hover:bg-white/30'
+                                                ? 'text-blue-600 bg-white hover:bg-blue-50'
+                                                : 'text-black bg-white/20 hover:bg-white/30'
                                             }`}
                                     >
                                         <Grid className="w-5 h-5 mr-2" />
@@ -224,8 +224,8 @@ export default function CoursesSection() {
                                     <button
                                         onClick={() => setViewType('list')}
                                         className={`flex items-center px-4 py-2 rounded-lg transition-colors duration-300 ${viewType === 'list'
-                                            ? 'text-blue-600 bg-white hover:bg-blue-50'
-                                            : 'text-black bg-white/20 hover:bg-white/30'
+                                                ? 'text-blue-600 bg-white hover:bg-blue-50'
+                                                : 'text-black bg-white/20 hover:bg-white/30'
                                             }`}
                                     >
                                         <List className="w-5 h-5 mr-2" />
@@ -233,6 +233,7 @@ export default function CoursesSection() {
                                     </button>
                                 </div>
                             </div>
+
 
                             <div className="flex flex-col md:flex-row gap-6">
                                 {/* Sidebar */}

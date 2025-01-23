@@ -8,6 +8,7 @@ import { ChevronRight, Home } from 'lucide-react';
 
 import coursesData from '../Data/CourseData';
 import HeaderComponent2 from '../components/Header2';
+import Link from 'next/link';
 
 export default function CoursesSection() {
     const [selectedRating, setSelectedRating] = useState(0);
@@ -20,6 +21,11 @@ export default function CoursesSection() {
     const renderGrid = () => (
         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {coursesData.map(course => (
+                  <Link 
+                  key={course.id} 
+                  href={`/course/${course.id}`}
+                  className="block"
+              >
                 <div
                     key={course.id}
                     className="group bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
@@ -90,6 +96,7 @@ export default function CoursesSection() {
                         </div>
                     </div>
                 </div>
+                </Link>
             ))}
         </div>
     );
@@ -97,6 +104,11 @@ export default function CoursesSection() {
     const renderList = () => (
         <div className="flex-1 flex flex-col gap-4">
             {coursesData.map(course => (
+                <Link 
+                key={course.id} 
+                href={`/course/${course.id}`}
+                className="block"
+            >
                 <div
                     key={course.id}
                     className="group bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
@@ -176,6 +188,8 @@ export default function CoursesSection() {
                         </div>
                     </div>
                 </div>
+                </Link>
+
             ))}
         </div>
     );
@@ -214,8 +228,8 @@ export default function CoursesSection() {
                                     <button
                                         onClick={() => setViewType('grid')}
                                         className={`flex items-center px-4 py-2 rounded-lg transition-colors duration-300 ${viewType === 'grid'
-                                                ? 'text-blue-600 bg-white hover:bg-blue-50'
-                                                : 'text-black bg-white/20 hover:bg-white/30'
+                                            ? 'text-blue-600 bg-white hover:bg-blue-50'
+                                            : 'text-black bg-white/20 hover:bg-white/30'
                                             }`}
                                     >
                                         <Grid className="w-5 h-5 mr-2" />
@@ -224,8 +238,8 @@ export default function CoursesSection() {
                                     <button
                                         onClick={() => setViewType('list')}
                                         className={`flex items-center px-4 py-2 rounded-lg transition-colors duration-300 ${viewType === 'list'
-                                                ? 'text-blue-600 bg-white hover:bg-blue-50'
-                                                : 'text-black bg-white/20 hover:bg-white/30'
+                                            ? 'text-blue-600 bg-white hover:bg-blue-50'
+                                            : 'text-black bg-white/20 hover:bg-white/30'
                                             }`}
                                     >
                                         <List className="w-5 h-5 mr-2" />
@@ -251,34 +265,6 @@ export default function CoursesSection() {
 
                                         {/* Categories with Scroll */}
                                         <div className="max-h-[calc(100vh-300px)] overflow-y-auto">
-                                            {/* Categories Section */}
-                                            {/* <div>
-                <h3 className="font-bold text-xl mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    Categories
-                </h3>
-                <ul className="space-y-3">
-                    {coursesData.map((category, index) => (
-                        <li
-                            key={index}
-                            className="flex justify-between items-center p-2 rounded-lg hover:bg-blue-50 transition-all duration-300 cursor-pointer group"
-                        >
-                            <span className="text-gray-600 group-hover:text-blue-600 transition-colors">
-                                {category.name}
-                            </span>
-                            <span className="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-sm group-hover:bg-blue-200 transition-colors">
-                                {category.count}
-                            </span>
-                        </li>
-                    ))}
-                </ul>
-                <button className="text-blue-600 mt-6 font-medium hover:text-blue-800 transition-colors flex items-center">
-                    Show More
-                    <span className="ml-1 transform group-hover:translate-x-1 transition-transform">+</span>
-                </button>
-            </div> */}
-
-                                            {/* Additional Filters */}
-
 
                                             <div className="mt-1">
                                                 <h3 className="font-bold text-xl mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold text-xl mb-4">Price</h3>

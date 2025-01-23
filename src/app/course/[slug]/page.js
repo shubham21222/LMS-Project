@@ -18,9 +18,9 @@ export default function CourseDetailPage({ params }) {
         <>
             <HeaderComponent2 />
             <div className="bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 min-h-screen">
-                <div className="max-w-7xl mx-auto px-6 py-12">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     {/* Breadcrumb */}
-                    <nav className="flex items-center space-x-2 text-sm mb-6">
+                    <nav className="flex flex-wrap items-center space-x-2 text-sm mb-6">
                         <a href="/" className="flex items-center text-gray-600 hover:text-blue-600">
                             Home
                         </a>
@@ -32,26 +32,28 @@ export default function CourseDetailPage({ params }) {
                         <span className="text-gray-900">{course.title}</span>
                     </nav>
 
-                    <div className="grid md:grid-cols-3 gap-12">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         {/* Main Content */}
-                        <div className="md:col-span-2">
-                            <h1 className="text-4xl font-bold text-gray-900 mb-3">{course.title}</h1>
-                            <p className="text-gray-700 text-lg mb-6">
+                        <div className="lg:col-span-2">
+                            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+                                {course.title}
+                            </h1>
+                            <p className="text-gray-700 text-base sm:text-lg mb-6">
                                 You'll learn advanced Photoshop techniques like retouching & Graphic Design tutorials.
                             </p>
-                            <div className="flex items-center space-x-4 mb-6">
+                            <div className="flex flex-wrap items-center space-x-4 mb-6">
                                 <div className="flex items-center space-x-2">
                                     <img
                                         src="https://demo.creativeitem.com/academy-laravel/public/uploads/users/admin/-1716717339.jpg"
                                         alt={course.author}
-                                        className="w-10 h-10 rounded-full"
+                                        className="w-8 h-8 sm:w-10 sm:h-10 rounded-full"
                                     />
-                                    <p className="font-medium">{course.author}</p>
+                                    <p className="font-medium text-sm sm:text-base">{course.author}</p>
                                 </div>
-                                <span className="text-gray-500">•</span>
-                                <p className="text-gray-500">Certificate Course</p>
+                                <span className="hidden sm:block text-gray-500">•</span>
+                                <p className="text-gray-500 text-sm sm:text-base">Certificate Course</p>
                             </div>
-                            <div className="flex items-center text-sm space-x-6 mb-8">
+                            <div className="flex flex-wrap items-center text-sm sm:text-base space-x-6 mb-8">
                                 <div className="flex items-center space-x-2">
                                     <Users className="w-5 h-5 text-gray-500" />
                                     <span>{course.students} Students</span>
@@ -69,25 +71,35 @@ export default function CourseDetailPage({ params }) {
                                     <span>Level: {course.level}</span>
                                 </div>
                             </div>
-                            <div className="bg-white rounded-lg shadow-md p-6">
-                                <nav className="flex space-x-4 border-b mb-4">
-                                    <a href="#" className="text-blue-600 font-medium border-b-2 border-blue-600 pb-2">
+                            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
+                                <nav className="flex flex-wrap space-x-4 border-b mb-4">
+                                    <a
+                                        href="#"
+                                        className="text-blue-600 font-medium border-b-2 border-blue-600 pb-2">
                                         Overview
                                     </a>
-                                    <a href="#" className="text-gray-600 hover:text-blue-600 pb-2">
+                                    <a
+                                        href="#"
+                                        className="text-gray-600 hover:text-blue-600 pb-2">
                                         Curriculum
                                     </a>
-                                    <a href="#" className="text-gray-600 hover:text-blue-600 pb-2">
+                                    <a
+                                        href="#"
+                                        className="text-gray-600 hover:text-blue-600 pb-2">
                                         Details
                                     </a>
-                                    <a href="#" className="text-gray-600 hover:text-blue-600 pb-2">
+                                    <a
+                                        href="#"
+                                        className="text-gray-600 hover:text-blue-600 pb-2">
                                         Instructor
                                     </a>
-                                    <a href="#" className="text-gray-600 hover:text-blue-600 pb-2">
+                                    <a
+                                        href="#"
+                                        className="text-gray-600 hover:text-blue-600 pb-2">
                                         Reviews
                                     </a>
                                 </nav>
-                                <h2 className="text-xl font-semibold mb-4">Course Overview</h2>
+                                <h2 className="text-lg sm:text-xl font-semibold mb-4">Course Overview</h2>
                                 <p className="text-gray-700 mb-4">
                                     Are you already good at Photoshop? This course will take you to the top level.
                                 </p>
@@ -98,22 +110,22 @@ export default function CourseDetailPage({ params }) {
                         </div>
 
                         {/* Sidebar */}
-                        <div className="md:col-span-1 sticky top-16 self-start">
-                            <div className="bg-white shadow-lg rounded-lg p-6">
+                        <div className="lg:col-span-1 sticky top-16 self-start">
+                            <div className="bg-white shadow-lg rounded-lg p-4 sm:p-6">
                                 <img
                                     src={course.image}
                                     alt={course.title}
-                                    className="rounded-lg mb-4"
+                                    className="rounded-lg mb-4 max-w-full h-auto"
                                 />
                                 <div className="text-center">
-                                    <p className="text-3xl font-bold text-gray-900 mb-2">
+                                    <p className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
                                         $45.00 <span className="line-through text-gray-500 text-xl">$59.00</span>
                                     </p>
-                                    <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                                    <button className="w-full bg-blue-600 text-white py-2 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors">
                                         Buy Now
                                     </button>
                                 </div>
-                                <ul className="text-sm text-gray-600 space-y-4 mt-6">
+                                <ul className="text-sm sm:text-base text-gray-600 space-y-4 mt-6">
                                     <li className="flex items-center space-x-2">
                                         <Users className="w-5 h-5 text-gray-500" />
                                         <span>{course.students} Students</span>

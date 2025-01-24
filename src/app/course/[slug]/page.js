@@ -5,6 +5,7 @@ import { Clock, Users, Star, BookOpen, ChevronRight } from 'lucide-react';
 import HeaderComponent2 from '../../components/Header2';
 import Footer from '../../components/Footer';
 import coursesData from '../../Data/CourseData';
+import ScheduleSection from '@/app/components/ScheduleSection';
 
 export default function CourseDetailPage({ params }) {
     const courseId = Number(params.slug);
@@ -60,7 +61,7 @@ export default function CourseDetailPage({ params }) {
                                 </div>
                                 <div className="flex items-center space-x-2">
                                     <Clock className="w-5 h-5 text-gray-500" />
-                                    <span>{course.duration}</span>
+                                    <span>{course.duration} Duration </span>
                                 </div>
                                 <div className="flex items-center space-x-2">
                                     <BookOpen className="w-5 h-5 text-gray-500" />
@@ -71,7 +72,7 @@ export default function CourseDetailPage({ params }) {
                                     <span>Level: {course.level}</span>
                                 </div>
                             </div>
-                            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
+                            <div className="bg-white rounded-[20px] shadow-2xl p-4 sm:p-6 ">
                                 <nav className="flex flex-wrap space-x-4 border-b mb-4">
                                     <a
                                         href="#"
@@ -110,44 +111,53 @@ export default function CourseDetailPage({ params }) {
                         </div>
 
                         {/* Sidebar */}
-                        <div className="lg:col-span-1 sticky top-16 self-start">
-                            <div className="bg-white shadow-lg rounded-lg p-4 sm:p-6">
-                                <img
-                                    src={course.image}
-                                    alt={course.title}
-                                    className="rounded-lg mb-4 max-w-full h-auto"
-                                />
-                                <div className="text-center">
-                                    <p className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
-                                        $45.00 <span className="line-through text-gray-500 text-xl">$59.00</span>
-                                    </p>
-                                    <button className="w-full bg-blue-600 text-white py-2 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                                        Buy Now
-                                    </button>
+                        <div className="lg:col-span-1 sticky top-16 shadow-2xl self-start rounded-[20px]  overflow-hidden">
+                            {/* Gradient Border */}
+                            <div className=" inset-0 bg-gradient-to-r from-[#2f57ef] via-[#c664ff] to-[#c664ff] rounded-[20px] p-[2px]">
+                                {/* Inner Content */}
+                                <div className="bg-white rounded-[20px] shadow-lg p-4 sm:p-6">
+                                    <img
+                                        src={course.image}
+                                        alt={course.title}
+                                        className="rounded-lg mb-4 max-w-full h-auto"
+                                    />
+                                    <div className="text-center">
+                                        <p className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+                                            $45.00 <span className="line-through text-gray-500 text-xl">$59.00</span>
+                                        </p>
+                                        <button className="btn w-full bg-blue-600 text-white py-2 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                                            Buy Now
+                                        </button>
+                                    </div>
+                                    <ul className="text-sm sm:text-base text-gray-600 space-y-4 mt-6">
+                                        <li className="flex items-center space-x-2">
+                                            <Users className="w-5 h-5 text-gray-500" />
+                                            <span>{course.students} Students</span>
+                                        </li>
+                                        <li className="flex items-center space-x-2">
+                                            <Clock className="w-5 h-5 text-gray-500" />
+                                            <span>{course.duration} Duration </span>
+                                        </li>
+                                        <li className="flex items-center space-x-2">
+                                            <BookOpen className="w-5 h-5 text-gray-500" />
+                                            <span>Language: {course.language}</span>
+                                        </li>
+                                        <li className="flex items-center space-x-2">
+                                            <Star className="w-5 h-5 text-gray-500" />
+                                            <span>Level: {course.level}</span>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <ul className="text-sm sm:text-base text-gray-600 space-y-4 mt-6">
-                                    <li className="flex items-center space-x-2">
-                                        <Users className="w-5 h-5 text-gray-500" />
-                                        <span>{course.students} Students</span>
-                                    </li>
-                                    <li className="flex items-center space-x-2">
-                                        <Clock className="w-5 h-5 text-gray-500" />
-                                        <span>{course.duration}</span>
-                                    </li>
-                                    <li className="flex items-center space-x-2">
-                                        <BookOpen className="w-5 h-5 text-gray-500" />
-                                        <span>Language: {course.language}</span>
-                                    </li>
-                                    <li className="flex items-center space-x-2">
-                                        <Star className="w-5 h-5 text-gray-500" />
-                                        <span>Level: {course.level}</span>
-                                    </li>
-                                </ul>
+
                             </div>
                         </div>
+
                     </div>
+                <ScheduleSection />
+
                 </div>
             </div>
+          
             <Footer />
         </>
     );

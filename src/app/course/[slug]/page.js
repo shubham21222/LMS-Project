@@ -6,6 +6,7 @@ import HeaderComponent2 from '../../components/Header2';
 import Footer from '../../components/Footer';
 import coursesData from '../../Data/CourseData';
 import ScheduleSection from '@/app/components/ScheduleSection';
+import Link from 'next/link';
 
 export default function CourseDetailPage({ params }) {
     const courseId = Number(params.slug);
@@ -125,9 +126,11 @@ export default function CourseDetailPage({ params }) {
                                         <p className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
                                             $45.00 <span className="line-through text-gray-500 text-xl">$59.00</span>
                                         </p>
+                                        <Link href="/mycourses">
                                         <button className="btn w-full bg-blue-600 text-white py-2 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors">
                                             Buy Now
                                         </button>
+                                        </Link>
                                     </div>
                                     <ul className="text-sm sm:text-base text-gray-600 space-y-4 mt-6">
                                         <li className="flex items-center space-x-2">

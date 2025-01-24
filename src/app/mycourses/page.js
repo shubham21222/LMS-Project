@@ -37,60 +37,60 @@ export default function UserDashboard() {
                                 </div>
 
                                 <nav className="space-y-4 mt-6">
-                                    <button
-                                        onClick={() => {}}
+                                    <a
+                                        href="javascript:void(0)"
                                         className="flex items-center text-blue-500 font-semibold hover:bg-blue-100 hover:rounded-lg p-2 transition"
                                     >
                                         <Book className="mr-3 w-5 h-5" /> My Courses
-                                    </button>
-                                    <button
-                                        onClick={() => {}}
+                                    </a>
+                                    <a
+                                        href="javascript:void(0)"
                                         className="flex items-center text-gray-600 hover:bg-gray-100 hover:rounded-lg p-2 transition"
                                     >
                                         <GraduationCap className="mr-3 w-5 h-5" /> My Bootcamps
-                                    </button>
-                                    <button
-                                        onClick={() => {}}
+                                    </a>
+                                    <a
+                                        href="javascript:void(0)"
                                         className="flex items-center text-gray-600 hover:bg-gray-100 hover:rounded-lg p-2 transition"
                                     >
                                         <Calendar className="mr-3 w-5 h-5" /> My Bookings
-                                    </button>
-                                    <button
-                                        onClick={() => {}}
+                                    </a>
+                                    <a
+                                        href="javascript:void(0)"
                                         className="flex items-center text-gray-600 hover:bg-gray-100 hover:rounded-lg p-2 transition"
                                     >
                                         <Users className="mr-3 w-5 h-5" /> My Teams
-                                    </button>
-                                    <button
-                                        onClick={() => {}}
+                                    </a>
+                                    <a
+                                        href="javascript:void(0)"
                                         className="flex items-center text-gray-600 hover:bg-gray-100 hover:rounded-lg p-2 transition"
                                     >
                                         <User className="mr-3 w-5 h-5" /> My Profile
-                                    </button>
-                                    <button
-                                        onClick={() => {}}
+                                    </a>
+                                    <a
+                                        href="javascript:void(0)"
                                         className="flex items-center text-gray-600 hover:bg-gray-100 hover:rounded-lg p-2 transition"
                                     >
                                         <Heart className="mr-3 w-5 h-5" /> Wishlist
-                                    </button>
-                                    <button
-                                        onClick={() => {}}
+                                    </a>
+                                    <a
+                                        href="javascript:void(0)"
                                         className="flex items-center text-gray-600 hover:bg-gray-100 hover:rounded-lg p-2 transition"
                                     >
                                         <MessageCircle className="mr-3 w-5 h-5" /> Message
-                                    </button>
-                                    <button
-                                        onClick={() => {}}
+                                    </a>
+                                    <a
+                                        href="javascript:void(0)"
                                         className="flex items-center text-gray-600 hover:bg-gray-100 hover:rounded-lg p-2 transition"
                                     >
                                         <ShoppingCart className="mr-3 w-5 h-5" /> Purchase History
-                                    </button>
-                                    <button
-                                        onClick={() => {}}
+                                    </a>
+                                    <a
+                                        href="javascript:void(0)"
                                         className="flex items-center text-gray-600 hover:bg-gray-100 hover:rounded-lg p-2 transition"
                                     >
                                         <LogOut className="mr-3 w-5 h-5" /> Logout
-                                    </button>
+                                    </a>
                                 </nav>
                                 <button className="mt-6 w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 rounded-lg font-semibold hover:shadow-md transition">
                                     Become an Instructor
@@ -103,9 +103,9 @@ export default function UserDashboard() {
                     <main className="flex-1 p-6 bg-white rounded-lg shadow-lg">
                         <h1 className="text-2xl font-semibold mb-6 text-gray-800">My Courses</h1>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {coursesData.map((course, index) => (
+                            {coursesData.map((course) => (
                                 <div
-                                    key={index}
+                                    key={course.id}
                                     className="bg-white p-4 shadow-md rounded-lg hover:shadow-xl hover:scale-[1.02] transition-transform"
                                 >
                                     <img

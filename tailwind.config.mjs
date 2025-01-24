@@ -7,6 +7,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': { 'max': '640px' }, // Define custom screen size 'xs' with a maximum width of 319px
+        // 'sm': {'max': '640px'},
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

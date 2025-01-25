@@ -1,4 +1,5 @@
 
+import Link from "next/link";
 import Footer from "../components/Footer";
 import HeaderComponent2 from "../components/Header2";
 import coursesData from "../Data/CourseData";
@@ -43,6 +44,7 @@ export default function UserDashboard() {
                                             style={{ width: `${course.progress}%` }}
                                         ></div>
                                     </div>
+                                    <Link href='/Login'>
                                     <button
                                         className={`w-full py-2 rounded-lg font-semibold ${course.progress === 0
                                                 ? "bg-blue-500 text-white hover:bg-blue-600"
@@ -51,6 +53,7 @@ export default function UserDashboard() {
                                     >
                                         {course.progress === 0 ? "Start Now" : "Continue"}
                                     </button>
+                                    </Link>
                                 </div>
                             ))}
                         </div>

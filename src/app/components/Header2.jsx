@@ -17,13 +17,14 @@ const HeaderComponent2 = () => {
         {/* Logo */}
         <div className="text-2xl font-bold text-purple-600">
           <a href="/">
-            <Image
+            {/* <Image
               src="https://cdn-ilabman.nitrocdn.com/xtUQWXOfcWGNRAIcJPfqVKOwFVhKDbyl/assets/images/optimized/rev-9a54eba/www.h2kinfosys.com/wp-content/uploads/2024/03/h2k-infosys-Logo.jpg"
               alt="H2K Infosys Logo"
               width={150} // Adjust width as needed
               height={50} // Adjust height as needed
               className="object-contain"
-            />
+            /> */}
+            <h1 className="text-3xl font-extrabold tracking-wide">KT HUB</h1>
           </a>
         </div>
 

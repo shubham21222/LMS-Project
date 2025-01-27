@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import logo from "../assets/Logo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -19,13 +20,14 @@ export default function Footer() {
                 {/* Branding Section */}
                 <div>
                     <h2 className="text-2xl font-bold mb-4 flex items-center text-white">
-                        <Image
+                        {/* <Image
                             src={logo}
                             alt="H2K Infosys Logo"
                             width={150} // Adjust width as needed
                             height={50} // Adjust height as needed
                             className="object-contain"
-                        />
+                        /> */}
+                        KT HUB
                     </h2>
                     <p className="text-sm text-gray-300 mb-6">
                         It is a long established fact that a reader will be distracted by the
@@ -65,6 +67,9 @@ export default function Footer() {
                         <li>Bootstrap</li>
                         <li>Blender</li>
                         <li>Learning Guitar</li>
+                        <li><Link href="/AdminDashboard">Admin Dashboard</Link></li>
+                        <li><Link href="/StudentDashboard">Student Dashboard</Link></li>
+
                     </ul>
                 </div>
 
